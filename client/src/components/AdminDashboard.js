@@ -48,6 +48,8 @@ export function AdminDashboard({ onLogout }) {
     amount: "",
     status: "scheduled",
   });
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [deleteItem, setDeleteItem] = useState(null);
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -234,6 +236,15 @@ export function AdminDashboard({ onLogout }) {
     }
     setAppointmentDialogOpen(false);
     setEditingAppointment(null);
+  }
+
+  function handleDeleteConfirm() {
+    if (deleteItem && deleteItem.type === "appointment") {
+      setAppointments((apps) => apps.filter((a) => a.id !== deleteItem.id));
+    }
+    // Add additional type checks here for other entity types as needed.
+    setDeleteDialogOpen(false);
+    setDeleteItem(null);
   }
 
   return (
@@ -583,20 +594,21 @@ export function AdminDashboard({ onLogout }) {
                         >
                           <button
                             className="appointments-btn ghost"
-                            onClick={() => handleEditAppointment(apt)}
+                            onClick={() => openAppointmentDialog(apt)}
                             title="Edit"
                           >
                             🖉
                           </button>
                           <button
                             className="appointments-btn ghost"
-                            onClick={() =>
-                              handleDeleteClick(
-                                "appointment",
-                                apt.id,
-                                `${apt.clientName} - ${apt.petName}`
-                              )
-                            }
+                            onClick={() => {
+                              setDeleteItem({
+                                id: apt.id,
+                                name: `${apt.clientName} - ${apt.petName}`,
+                                type: "appointment",
+                              });
+                              setDeleteDialogOpen(true);
+                            }}
                             title="Delete"
                           >
                             🗑️
@@ -841,6 +853,37 @@ export function AdminDashboard({ onLogout }) {
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+        )}
+
+        {deleteDialogOpen && (
+          <div className="dialog-backdrop">
+            <div className="dialog-content">
+              <div className="dialog-header">
+                <h3>Confirm Deletion</h3>
+                <p>
+                  Are you sure you want to delete
+                  <span className="dialog-item-name">{deleteItem?.name}</span>?
+                  This action cannot be undone.
+                </p>
+              </div>
+              <div className="dialog-footer">
+                <button
+                  type="button"
+                  className="appointments-btn outline"
+                  onClick={() => setDeleteDialogOpen(false)}
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  className="appointments-btn destructive"
+                  onClick={handleDeleteConfirm}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           </div>
         )}

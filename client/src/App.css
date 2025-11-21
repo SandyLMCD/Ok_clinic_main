@@ -537,3 +537,43 @@ body {
 .dialog-dot.open {
   background: #22c55e;
 }
+
+select,
+.appointments-filter,
+.dialog-field select {
+  border: 1px solid #d2d7df;
+  border-radius: 7px;
+  padding: 8px 16px;
+  background: #fff;
+  color: #222;
+  font-size: 1em;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  min-width: 120px;
+}
+
+select:focus,
+.appointments-filter:focus,
+.dialog-field select:focus {
+  border-color: #3460ea;
+  outline: none;
+  box-shadow: 0 0 2px #3460ea44;
+}
+
+.dialog-field select {
+  width: 100%;
+}
+
+.dialog-field {
+  position: relative;
+}
+
+/* Add a custom caret icon (optional) */
+.dialog-field select {
+  background-image: url("data:image/svg+xml;utf8,<svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1.5L6 6L11 1.5' stroke='%234460EA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.8em center;
+  background-size: 20px 12px;
+  padding-right: 38px; /* Make room for arrow */
+}
