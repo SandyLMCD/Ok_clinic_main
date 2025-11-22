@@ -19,18 +19,11 @@ export function AdminDashboard({ onLogout }) {
     { id: "c", name: "Daisy", species: "Dog", breed: "Beagle", ownerId: "2" },
     { id: "d", name: "Max", species: "Bird", breed: "Parakeet", ownerId: "2" },
   ]);
-  // const [services] = useState([
-  //   { id: "s1", name: "General Checkup" },
-  //   { id: "s2", name: "Vaccination" },
-  // ]);
+
   // --- /DUMMY DATA ---
 
   const [totalRevenue] = useState(0);
   const [pendingRevenue] = useState(0);
-  // const [appointment] = useState([]);
-  // const [users] = useState([]);
-  // const [pets] = useState([]);
-  // const [invoices] = useState([]);
   const [todayAppointments] = useState(0);
   const [activeUsers] = useState(0);
   const [totalPets] = useState(0);
@@ -90,27 +83,6 @@ export function AdminDashboard({ onLogout }) {
       apps.map((apt) => (apt.id === id ? { ...apt, status } : apt))
     );
   }
-
-  // function getScheduleStatusColor(status) {
-  //   switch (status) {
-  //     case "scheduled":
-  //       return "appointments-status-scheduled";
-  //     case "completed":
-  //       return "appointments-status-completed";
-  //     case "cancelled":
-  //       return "appointments-status-cancelled";
-  //     case "no-show":
-  //       return "appointments-status-noshow";
-  //     default:
-  //       return "";
-  //   }
-  // }
-
-  // function handleDeleteClick(type, id, label) {
-  //   if (window.confirm(`Really delete ${label}?`)) {
-  //     setAppointments((apps) => apps.filter((a) => a.id !== id));
-  //   }
-  // }
 
   // Helper: Get active clients (all users for now)
   function getActiveClients() {
@@ -294,18 +266,6 @@ export function AdminDashboard({ onLogout }) {
     });
   }
 
-  // // PET STATUS COLOR
-  // function getPetStatusColor(status) {
-  //   switch (status) {
-  //     case "active":
-  //       return "pet-status-active";
-  //     case "inactive":
-  //       return "pet-status-inactive";
-  //     default:
-  //       return "";
-  //   }
-  // }
-
   // PET STATUS UPDATE
   function updatePetStatus(petId, status) {
     setPets((current) =>
@@ -386,7 +346,6 @@ export function AdminDashboard({ onLogout }) {
   }
 
   // State for Clients Tab
-  // State for Clients tab
   const [clients, setClients] = useState([
     {
       id: "1",
@@ -749,11 +708,7 @@ export function AdminDashboard({ onLogout }) {
       return statusMatch && searchMatch;
     });
   }
-  // function updateFeedbackStatus(id, status) {
-  //   setFeedbacks((current) =>
-  //     current.map((fb) => (fb.id === id ? { ...fb, status } : fb))
-  //   );
-  // }
+
   function requestDeleteFeedback(feedback) {
     setDeleteItem({
       id: feedback.id,
@@ -762,19 +717,6 @@ export function AdminDashboard({ onLogout }) {
     });
     setDeleteDialogOpen(true);
   }
-  // // In your delete handler: add deleting feedback
-  // function handleDeleteConfirm() {
-  //   if (deleteItem) {
-  //     // ...other types...
-  //     if (deleteItem.type === "feedback") {
-  //       setFeedbacks((current) =>
-  //         current.filter((fb) => fb.id !== deleteItem.id)
-  //       );
-  //     }
-  //     setDeleteDialogOpen(false);
-  //     setDeleteItem(null);
-  //   }
-  // }
 
   // MAIN FRONTEND CODE - HTML COMPONENTS
   return (
@@ -2469,21 +2411,7 @@ export function AdminDashboard({ onLogout }) {
                           ? new Date(feedback.submittedAt).toLocaleDateString()
                           : ""}
                       </td>
-                      {/* <td>
-                        <select
-                          className={`feedback-status-select ${getStatusColor(
-                            feedback.status
-                          )}`}
-                          value={feedback.status}
-                          onChange={(e) =>
-                            updateFeedbackStatus(feedback.id, e.target.value)
-                          }
-                        >
-                          <option value="new">New</option>
-                          <option value="reviewed">Reviewed</option>
-                          <option value="resolved">Resolved</option>
-                        </select>
-                      </td> */}
+
                       <td style={{ textAlign: "right" }}>
                         <div
                           style={{

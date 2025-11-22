@@ -548,28 +548,6 @@ select:focus,
 .appointments-table tr:last-child td {
   border-bottom: none;
 }
-/* .appointments-status-select {
-  border-radius: 6px;
-  padding: 4px 8px;
-  border: 1px solid #d2d7df;
-  font-size: 0.98em;
-}
-.appointments-status-scheduled {
-  background: #e0e7ff;
-  color: #3460ea;
-}
-.appointments-status-completed {
-  background: #bbf7d0;
-  color: #158466;
-}
-.appointments-status-cancelled {
-  background: #fee2e2;
-  color: #b91c1c;
-}
-.appointments-status-noshow {
-  background: #feedd9;
-  color: #b45309;
-} */
 
 .dialog-backdrop {
   position: fixed;
@@ -822,20 +800,6 @@ select:focus,
 .pets-table tr:last-child td {
   border-bottom: none;
 }
-/* .pet-status-select {
-  border-radius: 6px;
-  padding: 4px 8px;
-  border: 1px solid #d2d7df;
-  font-size: 0.98em;
-}
-.pet-status-active {
-  background: #e0e7ff;
-  color: #3460ea;
-}
-.pet-status-inactive {
-  background: #fee2e2;
-  color: #b91c1c;
-} */
 
 /* For all select dropdowns, add a consistent custom down arrow */
 select,
@@ -979,20 +943,7 @@ select,
 .clients-table tr:last-child td {
   border-bottom: none;
 }
-/* .client-status-select {
-  border-radius: 6px;
-  padding: 4px 8px;
-  border: 1px solid #d2d7df;
-  font-size: 0.98em;
-}
-.client-status-active {
-  background: #e0e7ff;
-  color: #3460ea;
-}
-.client-status-inactive {
-  background: #fee2e2;
-  color: #b91c1c;
-} */
+
 /* For pretty dropdown arrows */
 .clients-filter {
   background-image: url("data:image/svg+xml;utf8,<svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1.5L6 6L11 1.5' stroke='%234460EA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
@@ -1121,24 +1072,7 @@ select,
 .invoices-table tr:last-child td {
   border-bottom: none;
 }
-/* .invoice-status-select {
-  border-radius: 6px;
-  padding: 4px 8px;
-  border: 1px solid #d2d7df;
-  font-size: 0.98em;
-}
-.invoice-status-paid {
-  background: #bbf7d0;
-  color: #16a34a;
-}
-.invoice-status-pending {
-  background: #e0e7ff;
-  color: #3460ea;
-}
-.invoice-status-overdue {
-  background: #fee2e2;
-  color: #b91c1c;
-} */
+
 /* Custom dropdown arrow */
 .invoices-filter {
   background-image: url("data:image/svg+xml;utf8,<svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1.5L6 6L11 1.5' stroke='%234460EA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
@@ -1267,20 +1201,7 @@ select,
 .services-table tr:last-child td {
   border-bottom: none;
 }
-/* .service-status-select {
-  border-radius: 6px;
-  padding: 4px 8px;
-  border: 1px solid #d2d7df;
-  font-size: 0.98em;
-}
-.service-status-active {
-  background: #ffe4ea;
-  color: #e94560;
-}
-.service-status-inactive {
-  background: #fcdee1;
-  color: #b91c1c;
-} */
+
 .services-filter {
   background-image: url("data:image/svg+xml;utf8,<svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1.5L6 6L11 1.5' stroke='%233460EA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
   background-repeat: no-repeat;
@@ -1405,32 +1326,7 @@ select,
 .feedback-table tr:last-child td {
   border-bottom: none;
 }
-/* .feedback-status-select {
-  border-radius: 6px;
-  padding: 4px 8px;
-  border: 1px solid #f3da89;
-  font-size: 0.98em;
-}
-.feedback-status-new {
-  background: #fffbeb;
-  color: #b45309;
-}
-.feedback-status-reviewed {
-  background: #f7eeba;
-  color: #937802;
-}
-.feedback-status-resolved {
-  background: #bbf7d0;
-  color: #158466;
-}
-/* Custom yellow down arrow
-.feedback-filter,
-.feedback-status-select {
-  background-image: url("data:image/svg+xml;utf8,<svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1.5L6 6L11 1.5' stroke='%23f7b731' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 0.8em center;
-  background-size: 20px 12px;
-  padding-right: 38px; */
+
 */ .star {
   color: #fbbf24;
   font-size: 1.1em;
